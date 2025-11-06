@@ -1,0 +1,11 @@
+{
+  "name": "esp32-led-control",
+  "version": "1.0.0",
+  "description": "ESP32 LED Control with Vercel and FreeSQLDatabase",
+  "dependencies": {
+    "serverless-mysql": "^1.5.5"
+  },
+  "engines": {
+    "node": ">=14.x"
+  }
+}

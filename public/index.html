@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم بالإضاءة - ESP32</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🔌 لوحة التحكم بالإضاءة</h1>
+        <div class="subtitle">نظام التحكم عن بُعد باستخدام ESP32</div>
+        
+        <!-- LED 1 Card -->
+        <div class="led-card" id="led1-card">
+            <div class="led-header">
+                <div class="led-title">
+                    <span class="led-icon">💡</span>
+                    LED 1
+                </div>
+                <div class="status-badge" id="led1-status">
+                    🔴 مطفأ
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-on" onclick="updateLED(1, 'ON')">
+                    تشغيل ✅
+                </button>
+                <button class="btn-off" onclick="updateLED(1, 'OFF')">
+                    إيقاف ❌
+                </button>
+            </div>
+        </div>
+        
+        <!-- LED 2 Card -->
+        <div class="led-card" id="led2-card">
+            <div class="led-header">
+                <div class="led-title">
+                    <span class="led-icon">💡</span>
+                    LED 2
+                </div>
+                <div class="status-badge" id="led2-status">
+                    🔴 مطفأ
+                </div>
+            </div>
+            
+            <div class="button-group">
+                <button class="btn-on" onclick="updateLED(2, 'ON')">
+                    تشغيل ✅
+                </button>
+                <button class="btn-off" onclick="updateLED(2, 'OFF')">
+                    إيقاف ❌
+                </button>
+            </div>
+        </div>
+        
+        <div class="info-box">
+            <strong>ℹ️ معلومات النظام</strong>
+            يمكنك التحكم بالإضاءة من هذه اللوحة أو من الأزرار المحلية المتصلة بـ ESP32
+            <br>
+            التحديث التلقائي كل 3 ثواني
+            <br>
+            <span id="connection-status">🔄 جاري التحقق من الاتصال...</span>
+        </div>
+        
+        <div class="footer">
+            آخر تحديث: <span id="last-update">--</span>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <div>جاري التحديث...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
