@@ -3,11 +3,11 @@ import mysql from 'serverless-mysql';
 // إنشاء اتصال قاعدة البيانات
 const db = mysql({
   config: {
-    host: process.env.DB_HOST || 'sql8.freesqldatabase.com',
+    host: process.env.DB_HOST || 'sql203.infinityfree.com',
     port: process.env.DB_PORT || 3306,
-    database: process.env.DB_NAME || 'sql8805485',
-    user: process.env.DB_USER || 'sql8805485',
-    password: process.env.DB_PASSWORD || 'wpfm3nSAaM'
+    database: process.env.DB_NAME || 'if0_40255653_esp32',
+    user: process.env.DB_USER || 'if0_40255653',
+    password: process.env.DB_PASSWORD || 'vpA4n68qfseBYWV'
   }
 });
 
@@ -83,3 +83,4 @@ export default async function handler(req, res) {
     });
   }
 }
+
